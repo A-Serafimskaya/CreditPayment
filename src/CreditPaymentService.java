@@ -1,15 +1,15 @@
 public class CreditPaymentService {
-    public double calculate(double rateinpercent, int creditinrub, int periodinyears) {
+    public double calculate(double rateInPercent, int creditInRub, int periodInYears) {
         ;
 
-        double m = rateinpercent / 1200;
-        int periodinmonths = periodinyears * 12;
+        double m = rateInPercent / 1200;
+        int periodInMonths = periodInYears  * 12;
         double a = 1 + m;
-        double b = Math.pow(a, periodinmonths);
+        double b = Math.pow(a, periodInMonths);
         double c = b - 1;
         double d = b / c;
         double k = m * d;
-        double result = creditinrub * k;
+        double result = creditInRub * k;
         return result;
     }
 }
